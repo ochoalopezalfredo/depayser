@@ -25,7 +25,11 @@
               "apps/frontend/src/favicon.ico",
               "apps/frontend/src/assets"
             ],
-            "styles": ["apps/frontend/src/styles.scss"],
+            "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "apps/frontend/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -79,7 +83,10 @@
               "apps/frontend/tsconfig.app.json",
               "apps/frontend/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/frontend/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/frontend/**"
+            ]
           }
         },
         "test": {
@@ -87,7 +94,11 @@
           "options": {
             "jestConfig": "apps/frontend/jest.config.js",
             "tsConfig": "apps/frontend/tsconfig.spec.json",
-            "setupFile": "apps/frontend/src/test-setup.ts"
+            "setupFile": "apps/frontend/src/test-setup.ts",
+            "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css"
+            ]
           }
         }
       }
@@ -113,8 +124,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/frontend-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/frontend-e2e/**"]
+            "tsConfig": [
+              "apps/frontend-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/frontend-e2e/**"
+            ]
           }
         }
       }
