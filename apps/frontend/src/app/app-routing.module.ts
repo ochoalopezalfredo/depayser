@@ -8,7 +8,7 @@ const appRoutes: Routes = [
 ];
 
 const config: ExtraOptions = {
-    useHash: true,
+    useHash: false,
     scrollPositionRestoration: 'enabled',
     preloadingStrategy: PreloadAllModules
 }
