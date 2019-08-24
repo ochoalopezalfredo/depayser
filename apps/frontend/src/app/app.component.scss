@@ -4,7 +4,12 @@
   width: 100%;
   position: fixed;
 }
-
+ul{
+  list-style:none;
+}
+mat-toolbar-row:nth-child(2) {
+  border-top: gray solid 1px;
+}
 mat-sidenav-container {
   height: 100%;
   width: 100%;
