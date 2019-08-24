@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { ExtraOptions, PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
-    { path: '', loadChildren: () => import('./catalog/catalog.module').then(m => m.CatalogModule) },
-
+    { path: '', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+    { path: 'catalogo', loadChildren: () => import('./catalog/catalog.module').then(m => m.CatalogModule) },
     { path: '**', redirectTo: '' }
 ];
 

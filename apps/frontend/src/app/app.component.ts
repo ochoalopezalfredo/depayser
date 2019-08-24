@@ -9,6 +9,7 @@ export class AppComponent {
   title = "Depayser";
   logo = "assets/logo.svg"
   navigation = [
+    { link: 'inicio', label: 'Inicio' },
     { link: 'catalogo', label: 'Catalogo' },
   ];
 }
