@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row fixed-bottom mb-4">
             <div class="col-4 col-md-2" *ngFor="let gender of genders">
-                <button mat-button> {{gender.label}}</button>
+                <button [routerLink]="gender.link" mat-button> {{gender.label}}</button>
             </div>
         </div>
     </div>

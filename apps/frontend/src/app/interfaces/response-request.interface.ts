@@ -1,4 +1,5 @@
-export interface ResponseInit {
+export interface ResponseRequest {
+    entry: any,
     response: {
         modules: {
             module: Array<any>

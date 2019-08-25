@@ -36,7 +36,7 @@
               <button mat-button class="nav-button" (click)=select.open()>
                 Géneros
                 <mat-select #select>
-                  <mat-option *ngFor="let gender of genders" [value]="gender.label">
+                  <mat-option [routerLink]="gender.link" (click)="select.close();" *ngFor="let gender of genders">
                     {{gender.label}}
                   </mat-option>
                 </mat-select>
