@@ -4,7 +4,6 @@ import { ExtraOptions, PreloadAllModules, RouterModule, Routes } from '@angular/
 const appRoutes: Routes = [
     { path: '', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
     { path: 'genero', loadChildren: () => import('./gender/gender.module').then(m => m.GenderModule) },
-    { path: 'catalogo', loadChildren: () => import('./catalog/catalog.module').then(m => m.CatalogModule) },
     { path: '**', redirectTo: '' }
 ];
 

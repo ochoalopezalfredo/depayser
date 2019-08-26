@@ -30,6 +30,5 @@ export class AppComponent {
   genders = genders
   navigation = [
     { link: 'inicio', label: 'Inicio' },
-    { link: 'catalogo', label: 'Catalogo' },
   ];
 }
