@@ -12,9 +12,7 @@
      [infiniteScrollDistance]="3"
      (scrolled)="loadMoreMovies()">
     <div class="col-auto p-0 m-1 mb-3" *ngFor="let movie of movies">
-        <div class="ccard">
-            <img mat-card-image [src]="movie.image_small" [alt]="movie.title">
-        </div>
+        <img (click)="openDetails(movie)" mat-card-image [src]="movie.image_small" [alt]="movie.title">
     </div>
 </div>
 <div class="row m-5 justify-content-center" *ngIf="endOfList">

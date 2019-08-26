@@ -1,0 +1,24 @@
+img.background{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    -webkit-filter: grayscale(100%);
+    -moz-filter:    grayscale(100%);
+    -ms-filter:     grayscale(100%);
+    -o-filter:      grayscale(100%);
+    filter: gray; 
+}
+img.base{
+    width: 100%;
+}
+.back{
+    display: inline-flex;
+    cursor: pointer;
+    p{
+        margin: 0px;
+        padding: 0px;
+    }
+}
+.talents-slide_image{
+    border-radius: 50%;
+}
