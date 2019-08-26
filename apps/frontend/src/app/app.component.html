@@ -1,6 +1,6 @@
 <div class="theme-wrapper">
   <mat-sidenav-container>
-    <mat-sidenav #sidenav mode="push">
+    <mat-sidenav #sidenav mode="push" id="sidenav">
       <div class="branding"><img class="smaller" [src]="logo" />
         <span>{{title}}</span></div>
       <mat-nav-list>
@@ -18,11 +18,11 @@
       </mat-nav-list>
     </mat-sidenav>
 
-    <div class="wrapper">
+    <div id="navbar" class="wrapper">
       <div class="toolbar" [style.position]="'fixed'" [class.mat-elevation-z4]="true">
         <mat-toolbar color="primary">
           <mat-toolbar-row>
-            <button mat-icon-button class="d-md-none" (click)="sidenav.open()">
+            <button mat-icon-button id="btnMenu" class="d-md-none" (click)="sidenav.open()">
               <mat-icon aria-hidden="false" aria-label="Menu">menu</mat-icon>
             </button>
             <span routerLink="" class="branding spacer center d-inline d-sm-none">
@@ -33,7 +33,7 @@
               <button mat-button class="nav-button" *ngFor="let item of navigation" [routerLink]="[item.link]" routerLinkActive="active">
                 {{item.label }}
               </button>
-              <button mat-button class="nav-button" (click)=select.open()>
+              <button id="btnGenders" mat-button class="nav-button" (click)=select.open()>
                 Géneros
                 <mat-select #select>
                   <mat-option [routerLink]="gender.link" (click)="select.close();" *ngFor="let gender of genders">
@@ -48,15 +48,6 @@
       <div class="content">
         <router-outlet></router-outlet>
       </div>
-      <!-- <div class="footer" >
-        <div class="row">
-          <div class="col-sm-12 links">
-            <a target="_blank">
-              <span>PIE</span>
-            </a>
-          </div>
-        </div>
-      </div> -->
     </div>
   </mat-sidenav-container>
 </div>
